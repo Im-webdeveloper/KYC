@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>KYC Registration Form</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <form action="./submit" method="post">
+        <h1 class="kyc-heading">KYC Form</h1>
+        <div class="sub-heading">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            name="name"
+            id="name"
+            placeholder="Enter your name"
+          />
+        </div>
+        <div class="sub-heading">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email id"
+          />
+        </div>
+        <div class="sub-heading">
+          <label for="address">Address</label>
+          <input
+            type="text"
+            name="address"
+            id="address"
+            placeholder="Enter your address here"
+          />
+        </div>
+        <div class="sub-heading">
+          <label for="phone">Phone Number</label>
+          <input
+            type="tel"
+            name="phone"
+            id="phone"
+            placeholder="Enter your phone number"
+          />
+        </div>
+        <div class="sub-heading">
+          <label for="dateOfBirth">Date of Birth</label>
+          <input
+            type="date"
+            id="start"
+            name="trip-start"
+            value="DD-MM-YYYY"
+            min="01-01-1950"
+            max="01-01-2006"
+          />
+        </div>
+        <div class="sub-heading">
+          <label for="idNumber">ID Number</label>
+          <input
+            type="text"
+            name="idNumber"
+            id="idNumber"
+            placeholder="Enter you ID here"
+          />
+        </div>
+
+        <div class="#">
+          <label for="maritalStatus" class="sub-heading">Marital Status</label>
+          <div class="marital-status">
+            <div class="#">
+              <input type="radio" name="maritalStatus" id="Male" value="Male" />
+              <label for="Male">Male</label>
+            </div>
+
+            <div class="#">
+              <input
+                type="radio"
+                name="maritalStatus"
+                id="Female"
+                value="Female"
+              />
+              <label for="Female">Female</label>
+            </div>
+            <div class="#">
+              <input
+                type="radio"
+                name="maritalStatus"
+                id="Transgender"
+                value="Transgender"
+              />
+              <label for="Transgender">Transgender</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="#">
+          <label for="documentType" class="sub-heading">Document Type</label>
+          <div class="doc-types">
+            <div class="#">
+              <input
+                type="radio"
+                name="documentType"
+                id="passport"
+                value="Passport"
+              />
+              <label for="passport">Passport</label>
+            </div>
+
+            <div class="#">
+              <input
+                type="radio"
+                name="documentType"
+                id="driverLicense"
+                value="Driver's License"
+              />
+              <label for="driverLicense">Driver's License</label>
+            </div>
+            <div class="#">
+              <input
+                type="radio"
+                name="documentType"
+                id="identityCard"
+                value="Identity Card"
+              />
+              <label for="identityCard">Identity Card</label>
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <label for="documentUpload" class="sub-heading"
+            >Upload Document</label
+          >
+          <!-- Input field to select an image -->
+          <input type="file" id="image-input" accept="image/*" />
+
+          <!-- Image preview section -->
+          <div id="image-preview-container">
+            <img id="image-preview" src="" alt="Image Preview" />
+          </div>
+        </div>
+        <div class="tos-div">
+          <input type="checkbox" name="termsOfService" id="termsOfService" />
+          <label for="termsOfService" class="tos"
+            >I agree to the terms of services</label
+          >
+        </div>
+        <!-- <div>
+          <input type="checkbox" name="termsOfService" id="termsOfService" />
+          <label for="termsOfService"
+            >I hereby declare that the information provided in this form is
+            accurate and complete. I confirm that if any information is found
+            incorrect and/or incomplete, that leads to a violation of
+            regulations, may initiate legal actions, and I accept that I am the
+            responsible party for any and all charges, penalties and
+            violations.</label
+          >
+        </div> -->
+
+        <div class="end-btns">
+          <input type="reset" value="Reset" class="sub-heading end-btn" />
+          <input type="submit" value="Submit" class="sub-heading end-btn" />
+        </div>
+      </form>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
